@@ -1,0 +1,117 @@
+/* #ff8021  orange  */
+
+@font-face {
+    font-family: 'Shnobel';
+
+    src: url('../fonts/Shnobel-Regular.woff') format('woff'),
+        url('../fonts/Shnobel-Oblique.woff') format('woff');
+
+    font-style: normal;
+    font-weight: normal;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+body {
+    /* font-family: 'Caveat', cursive;   для заголовков */
+    /* font-family: 'Exo 2', sans-serif;   для текста  */
+    font-size: 1em;
+
+}
+
+.title {
+    font-family: 'Shnobel';
+    color: #ff8021;
+    font-size: 2.5em;
+}
+
+.header {
+    /* background-image: url(../images/headerBG.png) ; */
+    background-image: url(../images/labrador.png);
+    background-repeat: no-repeat;
+    background-size: 1300px;
+    background-position: top right;
+    min-height: 90vh;
+    margin-bottom: 100px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.worktime {
+    padding-top: 100px;
+    margin-bottom: 100px;
+    color: #ff8021;
+}
+
+.header__title {
+    font-size: 5em;
+    margin-bottom: 30px;
+
+}
+
+.header__text {
+    max-width: 350px;
+    margin-bottom: 2em;
+}
+
+.orange__btn {
+    font-size: 1.1em;
+    border: 1px solid #ff8021;
+    padding: 0.5em 0.5em;
+    background-color: #ff8021;
+    border-radius: 0.4em;
+    box-shadow: 0.4em 0.3em 1em #753b0f;
+    color: #fff;
+}
+
+.calldoctor {
+    font-size: 0.7em;
+    text-decoration: underline;
+    margin-left: 30px;
+}
+
+.benefits {
+    margin-bottom: 100px;
+    color: #ff8021; ;
+    background-image: url(../images/paws2.png);
+    background-size: 200px;
+    border: 1px solid red;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: 23%;
+}
+
+.benefits__list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 60px 10px;
+}
+
+
+
+.benefits__title {
+    font-size: 4em;
+}
+
+.benefits__text {
+    font-weight: 600;
+}
+
+.change__list {
+    display: flex;
+}
