@@ -23,7 +23,8 @@ a {
 
 body {
     /* font-family: 'Caveat', cursive;   для заголовков */
-    /* font-family: 'Exo 2', sans-serif;   для текста  */
+    font-family: 'Exo 2', sans-serif;
+    /*Для текста */
     font-size: 1em;
 
 }
@@ -32,6 +33,11 @@ body {
     font-family: 'Shnobel';
     color: #ff8021;
     font-size: 2.5em;
+}
+
+.title__middle {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .header {
@@ -51,8 +57,8 @@ body {
 }
 
 .worktime {
-    padding-top: 100px;
-    margin-bottom: 100px;
+    padding-top: 10em;
+    margin-bottom: 10em;
     color: #ff8021;
 }
 
@@ -85,14 +91,25 @@ body {
 
 .benefits {
     margin-bottom: 100px;
-    color: #ff8021; ;
-    background-image: url(../images/paws2.png);
-    background-size: 200px;
-    border: 1px solid red;
+    color: #ff8021;
+    ;
     max-width: 1300px;
     margin: 0 auto;
-    background-repeat: no-repeat;
-    background-position: 23%;
+    position: relative;
+    margin-bottom: 100px;
+    /* box-shadow: 0px 0px 132px #edc7ab; */
+    overflow: hidden;
+    background-color: #f7f1f1;
+}
+
+.list__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    width: 100%;
+    opacity: 0.5;
+    height: auto;
 }
 
 .benefits__list {
@@ -102,8 +119,6 @@ body {
     padding: 60px 10px;
 }
 
-
-
 .benefits__title {
     font-size: 4em;
 }
@@ -112,6 +127,172 @@ body {
     font-weight: 600;
 }
 
-.change__list {
-    display: flex;
+.change {
+    margin-bottom: 220px;
 }
+
+.change__title {
+    font-size: 1.5em;
+}
+
+.change__content-box {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    padding-top: 100px;
+}
+
+.change__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}
+
+.change__item {
+    max-width: 200px;
+}
+
+.change__image-box {
+    transform: rotate(45deg);
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+
+.change__image {
+    background-image: url(../images/change-image.jpg);
+    width: 150%;
+    height: 150%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(-45deg);
+
+    position: absolute;
+    top: -24%;
+    left: -30%;
+}
+
+
+.services {
+    margin-bottom: 100px;
+}
+
+
+
+.all__services {
+    border: 1px solid gray;
+    padding: 30px;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+.all__services:hover {
+    background-color: rgb(221, 220, 220);
+}
+
+.services__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+
+.services__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services__item {
+    border: 1px solid #753b0f;
+    border-radius: 5%;
+    padding: 40px 80px;
+    transition: all 1s;
+    text-align: center;
+}
+
+.services__item:hover {
+    background-color: #eb6a08;
+
+}
+
+.services__item:hover .services__item-link {
+    color: #fff;
+}
+
+.services__item-img {
+    margin-bottom: 20px;
+}
+
+.services__item-title {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.services__item-img {
+    max-width: 100px;
+}
+
+.services__item-link {
+    text-decoration: underline;
+    color: #eb6a08;
+    transition: inherit;
+}
+
+
+
+.specialists {
+    margin-bottom: 100px;
+}
+
+.specialist__text {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.specialists__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #f7f1f1;
+}
+
+.specialists__item {
+    padding: 40px;
+    color: #eb6a08;
+    font-size: 1.5em;
+}
+
+
+
+.checklist {
+    margin-bottom: 500px;
+    background-image: url(../images/checklist-image.png);
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-position: top ;
+
+}
+
+
+.checklist__box {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+   
+    
+}
+
+.checklist__text {
+    max-width: 400px;
+    padding: 20px 40px 150px 0px;
+}
+
+
