@@ -41,8 +41,7 @@ body {
 }
 
 .header {
-    /* background-image: url(../images/headerBG.png) ; */
-    background-image: url(../images/labrador.png);
+    background-image: url(../images/header-bg.png);
     background-repeat: no-repeat;
     background-size: 1300px;
     background-position: top right;
@@ -182,14 +181,14 @@ body {
 
 
 
-.all__services {
+.gray__btn {
     border: 1px solid gray;
     padding: 30px;
     border-radius: 10px;
     transition: all 1s;
 }
 
-.all__services:hover {
+.gray__btn:hover {
     background-color: rgb(221, 220, 220);
 }
 
@@ -198,6 +197,7 @@ body {
     justify-content: space-between;
     margin-bottom: 30px;
     align-items: center;
+
 }
 
 
@@ -207,11 +207,24 @@ body {
 }
 
 .services__item {
-    border: 1px solid #753b0f;
-    border-radius: 5%;
+    position: relative;
     padding: 40px 80px;
     transition: all 1s;
     text-align: center;
+    border-radius: 30px;
+    background: #fff;
+}
+
+.services__item::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(35deg, #ff8021, gray);
+    border-radius: 34px;
+    z-index: -1;
 }
 
 .services__item:hover {
@@ -268,26 +281,41 @@ body {
     padding: 40px;
     color: #eb6a08;
     font-size: 1.5em;
+
 }
-
-
 
 .checklist {
-    margin-bottom: 500px;
-    background-image: url(../images/checklist-image.png);
-    background-repeat: no-repeat;
-    background-size: 1000px;
-    background-position: top ;
-
+    margin-bottom: 140px;
+    background-color: #eb6a08;
+    position: relative;
+    color: #fff;
 }
+
+.checklist__title {
+    color: #fff;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.chelist__img {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    left: calc(50% - 150px);
+}
+
+
 
 
 .checklist__box {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     position: relative;
-   
-    
+    align-items: center;
+
 }
 
 .checklist__text {
@@ -295,4 +323,131 @@ body {
     padding: 20px 40px 150px 0px;
 }
 
+form {
+    text-align: center;
+    border: 0;
 
+}
+
+.inputs__box>input {
+    margin-bottom: 15px;
+    border: 1px solid #ff8021;
+
+}
+
+.inputs__box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+    color: #eb6a08;
+    font-size: 1.2em;
+}
+
+.submit__btn {
+    background-color: #eb6a08;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid #fff;
+    width: 60%;
+
+
+}
+
+input {
+    border-radius: 10px;
+    padding: 10px 30px;
+    background-color: #f7f1f1;
+    width: 427px;
+    height: 63px;
+    border: 0;
+    outline: none;
+    font-size: 1.1em;
+}
+
+.reviews {
+    margin-bottom: 500px;
+}
+
+.reviews__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.arrows {
+    margin-left: auto;
+    margin-right: 200px;
+}
+
+.arrow {
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.arrow + .arrow {
+    margin-left: 30px;
+}
+
+.arrow-prev {
+    transform: scale(-1,-1);
+}
+
+.reviews__list {
+    display: flex;
+    
+}
+
+.reviews__item {
+    
+    max-width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 34px;
+    background: #fff;
+    position: relative;
+
+
+}
+
+.reviews__item + .reviews__item {
+    margin-left: 50px;
+}
+
+.reviews__item::before {
+    position: absolute;
+    content: '';
+    background: linear-gradient(35deg, #eb6a08, gold);
+    border-radius: 34px;
+    z-index: -1;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+}
+
+.member {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: left;
+    align-items: center;
+}
+
+
+
+.member__avatar {
+    width: 70px;
+    height: 70px;
+    margin-right: 30px;
+    border: 2px solid #753b0f;
+    border-radius: 50%;
+    padding: 10px;
+
+}
