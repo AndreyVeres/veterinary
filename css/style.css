@@ -26,6 +26,7 @@ body {
     font-family: 'Exo 2', sans-serif;
     /*Для текста */
     font-size: 1em;
+    overflow-x: hidden;
 
 }
 
@@ -183,9 +184,11 @@ body {
 
 .gray__btn {
     border: 1px solid gray;
-    padding: 30px;
+    padding: 25px 10px;
     border-radius: 10px;
     transition: all 1s;
+    width: 200px;
+    text-align: center;
 }
 
 .gray__btn:hover {
@@ -289,6 +292,9 @@ body {
     background-color: #eb6a08;
     position: relative;
     color: #fff;
+    background-image: url(../images/paws3.png);
+    background-position: left ;
+    background-size: cover;
 }
 
 .checklist__title {
@@ -332,7 +338,6 @@ form {
 .inputs__box>input {
     margin-bottom: 15px;
     border: 1px solid #ff8021;
-
 }
 
 .inputs__box {
@@ -353,8 +358,6 @@ input::placeholder {
     cursor: pointer;
     border: 1px solid #fff;
     width: 60%;
-
-
 }
 
 input {
@@ -369,7 +372,7 @@ input {
 }
 
 .reviews {
-    margin-bottom: 500px;
+    margin-bottom: 150px;
 }
 
 .reviews__header {
@@ -390,21 +393,20 @@ input {
     cursor: pointer;
 }
 
-.arrow + .arrow {
+.arrow+.arrow {
     margin-left: 30px;
 }
 
 .arrow-prev {
-    transform: scale(-1,-1);
+    transform: scale(-1, -1);
 }
 
 .reviews__list {
     display: flex;
-    
+    width: 100vw;
 }
 
 .reviews__item {
-    
     max-width: 300px;
     text-align: left;
     display: flex;
@@ -414,10 +416,9 @@ input {
     background: #fff;
     position: relative;
 
-
 }
 
-.reviews__item + .reviews__item {
+.reviews__item+.reviews__item {
     margin-left: 50px;
 }
 
@@ -440,8 +441,6 @@ input {
     align-items: center;
 }
 
-
-
 .member__avatar {
     width: 70px;
     height: 70px;
@@ -449,5 +448,102 @@ input {
     border: 2px solid #753b0f;
     border-radius: 50%;
     padding: 10px;
+}
+
+.grooming {
+    margin-bottom: 200px;
+}
+
+.grooming__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.grooming__box {
+    display: flex;
+}
+
+.grooming__text {
+    min-width: 400px;
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.slider__box {
+    display: flex;
+}
+
+.slider__img {
+    width: 300px;
+    height: 300px;
+    margin-right: 30px;
 
 }
+
+
+.reception {
+    background-color: #eb6a08;
+    margin-bottom: 200px;
+    position: relative;
+    min-height: 400px;
+    background-image: url(../images/paws3.png);
+    
+}
+
+.reception__box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reception__img {
+    position: absolute;
+    top: -117px;
+}
+
+
+.reception__form {
+    padding: 70px;
+}
+
+
+
+
+.questions {
+    margin-bottom: 500px;
+}
+
+.questions__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+}
+.questions__answer {
+    display: none;
+}
+
+.questions__content-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.questions__img {
+    max-width: 650px;
+}
+
+
+.questions__item {
+    padding: 20px;
+}
+
+.questions__title {
+    cursor: pointer;
+    display: inline-block;
+    border-bottom: 2px solid #753b0f;
+    padding: 5px;
+}
+
+
