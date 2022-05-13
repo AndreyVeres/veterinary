@@ -10,6 +10,15 @@
     font-weight: normal;
 }
 
+
+.hide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
 *,
 ::after,
 ::before {
@@ -463,17 +472,31 @@ input {
 
 .grooming__box {
     display: flex;
+    position: relative;
 }
 
 .grooming__text {
-    min-width: 400px;
-    text-align: center;
-    align-items: center;
+    max-width: 400px;
+
     padding: 50px;
 }
-
-.slider__box {
+.slider__container {
+    max-width: 700px;
+    padding: 30px;
+    /* overflow: hidden; */
+    
+}
+.slider__overflow {
+    position: absolute;
+    right: -385px;
+    overflow: hidden;
+    width: 1032px;
+}
+.slider__track {
     display: flex;
+    transition: 2s;
+    position: relative;
+    left: 0;
 }
 
 .slider__img {
