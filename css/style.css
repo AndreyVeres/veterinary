@@ -10,7 +10,9 @@
     font-weight: normal;
 }
 
-
+._error {
+    box-shadow: 0 0 15px red;
+}
 .hide {
     display: none;
 }
@@ -297,13 +299,15 @@ body {
 
 }
 
+
 .checklist {
-    margin-bottom: 140px;
+    margin-bottom: 150px;
     position: relative;
     color: #fff;
     background-image: url(../images/paws3.png);
     background-position: left;
     background-size: cover;
+    min-height: 400px;
 }
 
 .checklist__title {
@@ -329,7 +333,7 @@ body {
     display: flex;
     justify-content: space-between;
     position: relative;
-    align-items: center;
+
 
 }
 
@@ -341,6 +345,7 @@ body {
 form {
     text-align: center;
     border: 0;
+    padding: 50px 0;
 
 }
 
@@ -353,6 +358,9 @@ form {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
 }
 
 input::placeholder {
@@ -367,6 +375,8 @@ input::placeholder {
     cursor: pointer;
     border: 1px solid #fff;
     width: 60%;
+    margin: 0 auto;
+    display: block;
 }
 
 input {
@@ -478,6 +488,19 @@ input {
 .grooming__text {
     max-width: 400px;
     padding: 50px;
+}
+
+.status {
+    /* width: 200px;
+    height: 126px;
+    position: absolute;
+    top: 81px;
+    right: 546px;
+    transition: 3s; */
+    color: #fff;
+    font-size: 1.3em;
+    padding-top: 10px;
+   
 }
 
 .slider__container {
