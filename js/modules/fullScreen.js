@@ -1,13 +1,19 @@
 const fullScreen = () => {
 
 
-    const parent = document.querySelector('.slider__container')
+    const parent = document.querySelector('.slider__container');
     const modal = document.querySelector('.item__modal');
-    const modalImg = document.querySelector('.modal__img')
-    const closeModal = document.querySelector('.close__modal')
+    const modalImg = document.querySelector('.modal__img');
+    const closeModal = document.querySelector('.close__modal');
+    const images = document.querySelectorAll('.slider__img');
+    const leftBtn = document.querySelector('.modal__arrow-left');
+    const righttBtn = document.querySelector('.modal__arrow-right');
 
-    parent.addEventListener('click', showModal)
+    parent.addEventListener('click', showModal);
     modal.addEventListener('click', hideModal);
+    leftBtn.addEventListener('click', imageLeft);
+    righttBtn.addEventListener('click', imageRight);
+   
 
     function showModal(e) {
         let t = e.target;
@@ -27,60 +33,40 @@ const fullScreen = () => {
     }
 
 
-
-    const images = document.querySelectorAll('.slider__img');
-    const bigImg = document.querySelector('.modal__img');
-    const leftBtn = document.querySelector('.modal__arrow-left');
-    const righttBtn = document.querySelector('.modal__arrow-right');
-    const imagesSrc = [];
-
-    for(let i = 0 ; i < images.length ; i ++) {
-        imagesSrc.push(images[i].src );
-    }
-
     let src = null;
     let srcIndex = null;
-   images.forEach(img => {
-       img.addEventListener('click' , function(e) {
-           let t = e.target ;
-           src = t.src;
-           console.log(src)
+    const imagesSrc = [];
 
-           srcIndex = imagesSrc.findIndex(i => i == src);
-           console.log(srcIndex);
-       });
-   });
+    for (let i = 0; i < images.length; i++) {
+        imagesSrc.push(images[i].src);
+    }
 
-   leftBtn.addEventListener('click' , imageLeft);
-   righttBtn.addEventListener('click' , imageRight);
-   function imageLeft () {
-       if(srcIndex === 0 ){
-           srcIndex = imagesSrc.length ;
-       }
-        bigImg.src = imagesSrc[srcIndex - 1];
-        srcIndex = srcIndex-1;
-        console.log(srcIndex)
-        
-   }
+    images.forEach(img => {
+        img.addEventListener('click', function (e) {
+            let t = e.target;
+            src = t.src;
+            srcIndex = imagesSrc.findIndex(i => i == src);
+        });
+    });
 
-   function imageRight () {
-       if(srcIndex === imagesSrc.length -1){
-           srcIndex = -1 ;  //НИПАНИМАЮПАМАГИТИ
-       }
-    bigImg.src = imagesSrc[srcIndex + 1];
-    srcIndex = srcIndex+1;
-    console.log(srcIndex)
-}
+    function imageLeft() {
+        if (srcIndex === 0) {
+            srcIndex = imagesSrc.length;
+        }
+        modalImg.src = imagesSrc[srcIndex - 1];
+        srcIndex = srcIndex - 1;
+    }
 
+    function imageRight() {
+        if (srcIndex === imagesSrc.length - 1) {
+            srcIndex = -1;  //НИПАНИМАЮПАМАГИТИ
+        }
+        modalImg.src = imagesSrc[srcIndex + 1];
+        srcIndex = srcIndex + 1;
+    }
+};
 
-
-
-   
-    
-
-}
-
-export default fullScreen
+export default fullScreen;
 
 
 

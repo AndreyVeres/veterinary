@@ -182,19 +182,17 @@
 
 
     <section class="reviews">
-        <div class="container">
+        <div class="container reviews__container">
             <div class="reviews__header">
                 <h2 class="title">Отзывы</h2>
                 <div class="arrows">
                     <img class="arrow arrow-prev" src="images/arrow.png" alt="arrow">
                     <img class="arrow arrow-next" src="images/arrow.png" alt="arrow">
                 </div>
-                <a class="gray__btn" href="#">Оставить отзыв</a>
+                <a class="gray__btn reviews__btn" href="#">Оставить отзыв</a>
             </div>
 
-            <div class="container2">
-
-            </div>
+           
             <div class="reviews__list">
                 <div class="reviews__item">
                     <div class="member">
@@ -213,7 +211,6 @@
 
                 </div>
 
-
                 <div class="reviews__item">
                     <div class="member">
                         <img class="member__avatar" src="images/avatar.png" alt="avatar">
@@ -249,6 +246,23 @@
 
                 </div>
 
+
+                <div class="reviews__item">
+                    <div class="member">
+                        <img class="member__avatar" src="images/avatar.png" alt="avatar">
+                        <div class="member__name">
+                            <p class="member__firstname">Андрей </p>
+                            <p class="member__secondname"> Верес </p>
+                        </div>
+
+                    </div>
+                    <p class="reviews__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus delectus, corrupti
+                        earum ipsum aliquam nulla qui dolores eveniet provident neque, assumenda sequi cupiditate! Optio
+                        suscipit odio molestiae ex ad?
+                    </p>
+
+                </div>
 
                 <div class="reviews__item">
                     <div class="member">
@@ -291,6 +305,25 @@
         </div>
 
     </section>
+
+    <div class="popup reviews__popup">
+        <div class="popup__content">
+            <h2 class="title">Оставить отзыв</h2>
+            <form class="popup__form" action="#" method="post">
+                <div class="form__item">
+                    <input type="text" id="name" placeholder="Ваше имя">
+                </div>
+
+                <div class="form__area">
+                    <label for="area"></label>
+                    <textarea name="area" id="area" placeholder="Оставьте ваш отзыв"></textarea>
+                </div>
+
+                <input type="submit" class="submit__btn">
+            </form>
+        </div>
+
+    </div>
 
     <section class="grooming">
         <div class="container">

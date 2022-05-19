@@ -1,13 +1,13 @@
-const slider = () => {
+const carousel = (containerSelector , trackSelector,itemsSelector ,prevBtn ,nextBtn , slidesShow , slidesScroll) => {
     let position = 0;
-    const slidesToShow = 3;
-    const slidesToScroll = 1;
-    const container = document.querySelector('.slider__container')
-    const track = document.querySelector('.slider__track')
-    const items = document.querySelectorAll('.slider__item')
+    const slidesToShow = slidesShow;
+    const slidesToScroll = slidesScroll;
+    const container = document.querySelector(containerSelector);
+    const track = document.querySelector(trackSelector);
+    const items = document.querySelectorAll(itemsSelector);
     const itemsCount = items.length;
-    const btnPrev = document.querySelector('.slider__prev');
-    const btnNext = document.querySelector('.slider__next');
+    const btnPrev = document.querySelector(prevBtn);
+    const btnNext = document.querySelector(nextBtn);
     const itemWidth = container.clientWidth / slidesToShow;
     const movePosition = slidesToScroll * itemWidth;
 
@@ -27,7 +27,7 @@ const slider = () => {
         position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
         setPosition();
         checkBtns();
-        console.log(itemsLeft)
+        
 
     });
 
@@ -54,13 +54,10 @@ const slider = () => {
 
     checkBtns();
 
-
-
-
 };
 
 
-export default slider;
+export default carousel;
 
 
 
