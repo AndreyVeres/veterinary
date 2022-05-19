@@ -13,6 +13,7 @@
 ._error {
     box-shadow: 0 0 15px red;
 }
+
 .hide {
     display: none;
 }
@@ -26,6 +27,55 @@
 ::before {
     box-sizing: border-box;
 }
+
+.item__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    overflow: auto;
+    z-index: 55;
+    animation: modalAnimation;
+}
+
+.item__modal,
+.modal__img {
+    animation-name: zoom;
+    animation-duration: 0.3s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.modal__img {
+    width: 800px;
+    height: 500px;
+    position: relative;
+    top: 25%;
+    left: calc(50% - 400px);
+
+}
+
+.close__modal {
+    top: 100px;
+    right: 100px;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+}
+
 
 a {
     display: inline-block;
@@ -500,7 +550,7 @@ input {
     color: #fff;
     font-size: 1.3em;
     padding-top: 10px;
-   
+
 }
 
 .slider__container {
@@ -516,10 +566,14 @@ input {
     transition: all 2s;
 }
 
+
+
+
 .slider__img {
     margin: 5px;
     height: 340px;
     border-radius: 10px;
+    max-width: 100%;
 }
 
 

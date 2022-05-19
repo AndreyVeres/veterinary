@@ -2,16 +2,12 @@ const forms = () => {
     const forms = document.querySelector('.form');
 
 
-
-    // forms.forEach(form => {
-    //     form.addEventListener('submit' , function() {
-    //         formSend();
-            
-    //     });
-
-
-    // });
-   
+    const message = {
+        loading : 'Загрузка' ,
+        success : 'Данные отправленн',
+        failure : 'Что-то сломалось',
+        wrongValue : 'Заполните все поля'
+    }
    
     forms.addEventListener('submit' , formSend);
 
@@ -19,6 +15,12 @@ const forms = () => {
         event.preventDefault();
 
         let error = formValidate(forms);
+        const messageStatus = document.createElement('div');
+        messageStatus.textContent = message.loading;
+        forms.append(messageStatus);
+        if(error > 0) {
+            messageStatus.textContent = message.wrongValue
+        }
 
         
         let formData = new FormData(forms);
@@ -31,8 +33,7 @@ const forms = () => {
         });
 
         
-
-
+ 
         if(error === 0) {
            
             let response = await fetch('http://localhost:3000/people' , {
@@ -43,11 +44,14 @@ const forms = () => {
                 body : JSON.stringify(obj)
             });
             if(response.ok) {
+                messageStatus.textContent = message.success;
                 console.log(response);
             }else {
-                console.log('err')
+                console.log('err');
+               
             }
         }
+       
     }
 
    
@@ -75,7 +79,7 @@ const forms = () => {
             
         }
 
-
+     
 
         return error;
 

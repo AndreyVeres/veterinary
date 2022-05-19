@@ -1,10 +1,10 @@
 const slider = () => {
     let position = 0;
     const slidesToShow = 3;
-    const slidesToScroll = 3;
+    const slidesToScroll = 1;
     const container = document.querySelector('.slider__container')
     const track = document.querySelector('.slider__track')
-    const items = document.querySelectorAll('.slider__img')
+    const items = document.querySelectorAll('.slider__item')
     const itemsCount = items.length;
     const btnPrev = document.querySelector('.slider__prev');
     const btnNext = document.querySelector('.slider__next');
@@ -19,7 +19,7 @@ const slider = () => {
 
         setPosition();
         checkBtns();
-        console.log(position);
+    
     });
 
     btnNext.addEventListener('click', () => {
@@ -53,6 +53,9 @@ const slider = () => {
     });
 
     checkBtns();
+
+
+
 
 };
 
