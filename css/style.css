@@ -38,9 +38,19 @@
     display: none;
     overflow: auto;
     z-index: 55;
+    color: #fff;
     animation: modalAnimation;
 }
+.modal__arrows {
+    left: 50%;
+    position: absolute;
+    top: calc(50% - 300px);
+    cursor: pointer;
+}
 
+.modal__arrow-left {
+    margin-right: 15px;
+}
 .item__modal,
 .modal__img {
     animation-name: zoom;

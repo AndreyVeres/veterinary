@@ -6,22 +6,20 @@ const forms = () => {
         loading : 'Загрузка' ,
         success : 'Данные отправленн',
         failure : 'Что-то сломалось',
-        wrongValue : 'Заполните все поля'
+        wrongValue : 'корректно заполните все поля'
     }
    
     forms.addEventListener('submit' , formSend);
 
     async function formSend(event) {
         event.preventDefault();
-
+       
         let error = formValidate(forms);
         const messageStatus = document.createElement('div');
         messageStatus.textContent = message.loading;
         forms.append(messageStatus);
-        if(error > 0) {
-            messageStatus.textContent = message.wrongValue
-        }
 
+        
         
         let formData = new FormData(forms);
         formData.append("id" , Math.random());
@@ -33,9 +31,9 @@ const forms = () => {
         });
 
         
- 
+       
         if(error === 0) {
-           
+            
             let response = await fetch('http://localhost:3000/people' , {
                 method : 'POST',
                 headers : {
@@ -45,12 +43,25 @@ const forms = () => {
             });
             if(response.ok) {
                 messageStatus.textContent = message.success;
-                console.log(response);
+                forms.reset();
             }else {
-                console.log('err');
-               
+                messageStatus.textContent = message.failure;
             }
+        }else {
+            messageStatus.textContent = message.wrongValue;
         }
+        if(messageStatus){
+            document.querySelector('.submit__btn').disabled = true;
+            setTimeout(() => {
+                document.querySelector('.submit__btn').disabled = false;
+            }, 1000);
+        }
+       
+           
+      
+        setTimeout(() => {
+            messageStatus.remove()
+        }, 1000);
        
     }
 
