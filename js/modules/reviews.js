@@ -1,50 +1,64 @@
 
-
-
-
 const reviews = () => {
-    class Reviews {
 
-        constructor(firstname ,secondName, avatar , text ,parent){
-            this.name = firstname ;
-            this.secondName = secondName;
-            this.avatar = avatar;
-            this.text = text;
-            this.parent = document.querySelector(parent);
-        }
+  class Reviews {
 
-        render () {
-            const div = document.createElement('div');
-            div.classList.add('reviews__item');
-            this.parent.append(div);
-
-            div.innerHTML = `
-            <div class="member">
-              <img class="member__avatar" src="${this.avatar}" alt="avatar">
-              <div class="member__name">
-                    <p class="member__firstname">${this.name} </p>
-                    <p class="member__secondname"> ${this.secondName} </p>
-              </div>
-
-            </div>
-            <p class="reviews__text">
-              ${this.text};
-            </p>
-            
-            `;
-        }
+    constructor(name, text, parent) {
+      this.name = name;
+      this.text = text;
+      this.parent = document.querySelector(parent);
     }
 
-    // const firstReview = new Reviews('andrey' , 'veres' ,'' , 'loremlorem' , '.reviews__list').render();
+      render() {
+        const div = document.createElement('div');
+        div.classList.add('reviews__item');
+        this.parent.append(div);
 
-    function createCard () {
+        div.innerHTML = `
+        <div class="member">
+        <img class="member__avatar" src="images/avatar.png" alt="avatar">
+        <div class="member__name">
+            <p class="member__firstname">${this.name} </p>
         
-    }
+        </div>
+
+        </div>
+        <p class="reviews__text">
+          ${this.text}
+        </p>
+              
+              `;
+      }
+  }
+
+  const popupForm = document.querySelector('.popup__form');
+
+  popupForm.addEventListener('submit', function (e) {
+    makeCommetn(e);
+  });
+
+  function makeCommetn(e) {
+    e.preventDefault()
+    const form = document.querySelector('.reviews__popup');
+    const reviewsName = document.querySelector('.reviews__name');
+    const reviewsArea = document.querySelector('.reviews__area');
+
+
+    const firstReview = new Reviews(reviewsName.value, reviewsArea.value, '.reviews__list').render();
+    const comment = {
+      commentName : reviewsName.value ,
+      commentText : reviewsArea.value
+    };
+
+    popupForm.reset();
+    form.style.display = 'none';
+    document.body.style.overflow = '';
   
-
-
-
+    localStorage.setItem('comment' , JSON.stringify(comment));
+    
    
-}
+  }
+
+};
 
 export default reviews;

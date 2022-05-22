@@ -165,14 +165,14 @@ textarea {
 .header {
     background-image: url(../images/header-bg.png);
     background-repeat: no-repeat;
-    background-size: 1300px;
-    background-position: top right;
+    background-size: contain;
+    background-position: top center;
     min-height: 90vh;
     margin-bottom: 100px;
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -192,7 +192,10 @@ textarea {
 .header__text {
     max-width: 350px;
     margin-bottom: 2em;
+    color: red;
+    font-weight: 700;
 }
+
 
 .orange__btn {
     font-size: 1.1em;
@@ -202,23 +205,27 @@ textarea {
     border-radius: 0.4em;
     box-shadow: 0.4em 0.3em 1em #753b0f;
     color: #fff;
+    margin-bottom: 10px;
 }
 
 .calldoctor {
-    font-size: 0.7em;
+    font-size: 1em;
     text-decoration: underline;
     margin-left: 30px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 0.4em;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5)
 }
 
 .benefits {
-    margin-bottom: 100px;
     color: #ff8021;
-    ;
     max-width: 1300px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 100px;
-    /* box-shadow: 0px 0px 132px #edc7ab; */
     overflow: hidden;
     background-color: #f7f1f1;
 }
@@ -245,6 +252,7 @@ textarea {
 }
 
 .benefits__text {
+  
     font-weight: 600;
 }
 
@@ -310,6 +318,7 @@ textarea {
     transition: all 1s;
     width: 200px;
     text-align: center;
+    box-shadow: 0.4em 0.3em 1em #424242;
 }
 
 .gray__btn:hover {
@@ -483,7 +492,6 @@ input::placeholder {
     font-weight: 700;
     cursor: pointer;
     border: 1px solid #fff;
-    width: 60%;
     margin: 0 auto;
     display: block;
 }
@@ -492,7 +500,7 @@ input {
     border-radius: 10px;
     padding: 10px 30px;
     background-color: #f7f1f1;
-    width: 427px;
+    max-width: 427px;
     height: 63px;
     border: 0;
     outline: none;
@@ -531,19 +539,20 @@ input {
 
 .reviews__list {
     display: flex;
-    width: 100vw;
+    /* width: 100vw; */
     transition: all 2s;
 }
 
 .reviews__item {
     max-width: 300px;
     text-align: left;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     padding: 30px;
     border-radius: 34px;
     background: #fff;
     position: relative;
+    
 
 }
 

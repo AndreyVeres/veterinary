@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Exo+2&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <title>Document</title>
 </head>
 
@@ -74,9 +75,9 @@
                         <p class="change__text">В клинике работают доктора высшей категории</p>
                     </div>
                 </div>
-                <div class="change__items">
+                <div class="change__items image__change">
                     <div class="change__image-box">
-                        <!-- <img class="change__img" src="images/change-image.jpg" alt="image"> -->
+                        <img class="change__img" src="images/change-image.jpg" alt="image">
                         <div class="change__image"></div>
                     </div>
 
@@ -97,7 +98,7 @@
 
     </section>
 
-
+   
     <section class="services">
         <div class="container">
             <div class="services__header">
@@ -130,7 +131,7 @@
             </ul>
         </div>
     </section>
-
+ 
 
     <section class="specialists">
         <div class="container">
@@ -139,7 +140,7 @@
                 работы в различных медицинских направлениях</p>
 
             <ul class="specialists__list">
-             
+
                 <li class="specialists__item">Терапевт</li>
                 <li class="specialists__item">Анастазиолог</li>
                 <li class="specialists__item">Дерматолог</li>
@@ -148,9 +149,9 @@
                 <li class="specialists__item">Онколог</li>
                 <li class="specialists__item">Хирург</li>
                 <li class="specialists__item">Офтальмолог</li>
-                <li>  <img class="list__bg" src="./images/paws3.png" alt="paws"></li>
+                <li> <img class="list__bg" src="./images/paws3.png" alt="paws"></li>
             </ul>
-          
+
         </div>
     </section>
 
@@ -166,8 +167,8 @@
                 <div class="checklist__item">
                     <form class="form" action="server.php" method="post">
                         <div class="inputs__box">
-                            <input class="_valid _login"  type="text" name="name" placeholder="Ваше имя">
-                            <input class="_valid _email"  type="email" name="email" placeholder="E-mail">
+                            <input class="_valid _login" type="text" name="name" placeholder="Ваше имя">
+                            <input class="_valid _email" type="email" name="email" placeholder="E-mail">
                         </div>
 
                         <input class="submit__btn" type="submit" value="Получить чек-лист">
@@ -192,116 +193,17 @@
                 <a class="gray__btn reviews__btn" href="#">Оставить отзыв</a>
             </div>
 
-           
+
+
+
             <div class="reviews__list">
-                <div class="reviews__item">
-                    <div class="member">
-                        <img class="member__avatar" src="images/avatar.png" alt="avatar">
-                        <div class="member__name">
-                            <p class="member__firstname">Андрей </p>
-                            <p class="member__secondname"> Верес </p>
-                        </div>
 
-                    </div>
-                    <p class="reviews__text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus delectus, corrupti
-                        earum ipsum aliquam nulla qui dolores eveniet provident neque, assumenda sequi cupiditate! Optio
-                        suscipit odio molestiae ex ad?
-                    </p>
-
-                </div>
-
-                <div class="reviews__item">
-                    <div class="member">
-                        <img class="member__avatar" src="images/avatar.png" alt="avatar">
-                        <div class="member__name">
-                            <p class="member__firstname">Андрей </p>
-                            <p class="member__secondname"> Верес </p>
-                        </div>
-
-                    </div>
-                    <p class="reviews__text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus delectus, corrupti
-                        earum ipsum aliquam nulla qui dolores eveniet provident neque, assumenda sequi cupiditate! Optio
-                        suscipit odio molestiae ex ad?
-                    </p>
-
-                </div>
-
-
-                <div class="reviews__item">
-                    <div class="member">
-                        <img class="member__avatar" src="images/avatar.png" alt="avatar">
-                        <div class="member__name">
-                            <p class="member__firstname">Андрей </p>
-                            <p class="member__secondname"> Верес </p>
-                        </div>
-
-                    </div>
-                    <p class="reviews__text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus delectus, corrupti
-                        earum ipsum aliquam nulla qui dolores eveniet provident neque, assumenda sequi cupiditate! Optio
-                        suscipit odio molestiae ex ad?
-                    </p>
-
-                </div>
-
-
-                <div class="reviews__item">
-                    <div class="member">
-                        <img class="member__avatar" src="images/avatar.png" alt="avatar">
-                        <div class="member__name">
-                            <p class="member__firstname">Андрей </p>
-                            <p class="member__secondname"> Верес </p>
-                        </div>
-
-                    </div>
-                    <p class="reviews__text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus delectus, corrupti
-                        earum ipsum aliquam nulla qui dolores eveniet provident neque, assumenda sequi cupiditate! Optio
-                        suscipit odio molestiae ex ad?
-                    </p>
-
-                </div>
-
-                <div class="reviews__item">
-                    <div class="member">
-                        <img class="member__avatar" src="images/avatar.png" alt="avatar">
-                        <div class="member__name">
-                            <p class="member__firstname">Андрей </p>
-                            <p class="member__secondname"> Верес </p>
-                        </div>
-
-                    </div>
-                    <p class="reviews__text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus delectus, corrupti
-                        earum ipsum aliquam nulla qui dolores eveniet provident neque, assumenda sequi cupiditate! Optio
-                        suscipit odio molestiae ex ad?
-                    </p>
-
-                </div>
-
-
-                <div class="reviews__item">
-                    <div class="member">
-                        <img class="member__avatar" src="images/avatar.png" alt="avatar">
-                        <div class="member__name">
-                            <p class="member__firstname">Андрей </p>
-                            <p class="member__secondname"> Верес </p>
-                        </div>
-
-                    </div>
-                    <p class="reviews__text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus delectus, corrupti
-                        earum ipsum aliquam nulla qui dolores eveniet provident neque, assumenda sequi cupiditate! Optio
-                        suscipit odio molestiae ex ad?
-                    </p>
-
-                </div>
 
 
 
             </div>
+
+
         </div>
 
     </section>
@@ -311,12 +213,12 @@
             <h2 class="title">Оставить отзыв</h2>
             <form class="popup__form" action="#" method="post">
                 <div class="form__item">
-                    <input type="text" id="name" placeholder="Ваше имя">
+                    <input class="reviews__name" name="name" type="text" id="name" placeholder="Ваше имя">
                 </div>
 
                 <div class="form__area">
                     <label for="area"></label>
-                    <textarea name="area" id="area" placeholder="Оставьте ваш отзыв"></textarea>
+                    <textarea class="reviews__area" name="area" id="area" placeholder="Оставьте ваш отзыв"></textarea>
                 </div>
 
                 <input type="submit" class="submit__btn">
@@ -353,42 +255,42 @@
                         <span class="modal__arrow-left"> left </span>
                         <span class="modal__arrow-right"> right</span>
                     </div>
-                    
+
                     <img class="modal__img" src="" alt="image">
 
                 </div>
                 <div class="slider__container">
                     <div class="slider__track">
-                     
+
 
 
                         <div class="slider__item">
                             <img class="slider__img" src="images/grooming.jpg" alt="">
                         </div>
-                        <div  class="slider__item">
+                        <div class="slider__item">
                             <img class="slider__img" src="images/grooming-2.jpg" alt="">
                         </div>
-                       
-                        <div  class="slider__item">
+
+                        <div class="slider__item">
                             <img class="slider__img" src="images/grooming-3.jpg" alt="">
                         </div>
 
-                        <div  class="slider__item">
+                        <div class="slider__item">
                             <img class="slider__img" src="images/grooming-2.jpg" alt="">
                         </div>
-                        <div  class="slider__item">
+                        <div class="slider__item">
                             <img class="slider__img" src="images/grooming.jpg" alt="">
                         </div>
-                        <div  class="slider__item">
+                        <div class="slider__item">
                             <img class="slider__img" src="images/grooming-2.jpg" alt="">
                         </div>
-                        <div  class="slider__item">
+                        <div class="slider__item">
                             <img class="slider__img" src="images/grooming-3.jpg" alt="">
                         </div>
-                        
-                      
-                       
-                       
+
+
+
+
                     </div>
 
                 </div>
@@ -406,7 +308,7 @@
 
     </section>
 
-
+<!-- 
     <section class="reception">
         <div class="container">
             <div class="reception__box">
@@ -414,14 +316,14 @@
                     <img class="reception__img" src="images/reception-img.png" alt="img">
                 </div>
 
-                <!-- <form class="reception__form form" action="server.php" method="post">
+                 <form class="reception__form form" action="server.php" method="post">
                     <div class="inputs__box reception__inputs">
                         <input class="_valid _login" type="text" name="name" placeholder="Ваше имя">
                         <input class="_valid _email" type="email" name="email" placeholder="E-mail">
                     </div>
 
                     <input class="submit__btn" type="submit" value="Записаться на приём">
-                </form> -->
+                </form> 
             </div>
 
         </div>
@@ -520,7 +422,7 @@
     </footer>
 
 
-
+ -->
 
 
 
@@ -534,3 +436,104 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+                <div class="reviews__item">
+                    <div class="member">
+                        <img class="member__avatar" src="images/avatar.png" alt="avatar">
+                        <div class="member__name">
+                            <p class="member__firstname">Андрей </p>
+                            <p class="member__secondname"> Верес </p>
+                        </div>
+
+                    </div>
+                    <p class="reviews__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus delectus, corrupti
+                        earum ipsum aliquam nulla qui dolores eveniet provident neque, assumenda sequi cupiditate! Optio
+                        suscipit odio molestiae ex ad?
+                    </p>
+
+                </div>
+
+
+                <div class="reviews__item">
+                    <div class="member">
+                        <img class="member__avatar" src="images/avatar.png" alt="avatar">
+                        <div class="member__name">
+                            <p class="member__firstname">Андрей </p>
+                            <p class="member__secondname"> Верес </p>
+                        </div>
+
+                    </div>
+                    <p class="reviews__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus delectus, corrupti
+                        earum ipsum aliquam nulla qui dolores eveniet provident neque, assumenda sequi cupiditate! Optio
+                        suscipit odio molestiae ex ad?
+                    </p>
+
+                </div>
+
+
+                <div class="reviews__item">
+                    <div class="member">
+                        <img class="member__avatar" src="images/avatar.png" alt="avatar">
+                        <div class="member__name">
+                            <p class="member__firstname">Андрей </p>
+                            <p class="member__secondname"> Верес </p>
+                        </div>
+
+                    </div>
+                    <p class="reviews__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus delectus, corrupti
+                        earum ipsum aliquam nulla qui dolores eveniet provident neque, assumenda sequi cupiditate! Optio
+                        suscipit odio molestiae ex ad?
+                    </p>
+
+                </div>
+
+                <div class="reviews__item">
+                    <div class="member">
+                        <img class="member__avatar" src="images/avatar.png" alt="avatar">
+                        <div class="member__name">
+                            <p class="member__firstname">Андрей </p>
+                            <p class="member__secondname"> Верес </p>
+                        </div>
+
+                    </div>
+                    <p class="reviews__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus delectus, corrupti
+                        earum ipsum aliquam nulla qui dolores eveniet provident neque, assumenda sequi cupiditate! Optio
+                        suscipit odio molestiae ex ad?
+                    </p>
+
+                </div>
+
+
+                <div class="reviews__item">
+                    <div class="member">
+                        <img class="member__avatar" src="images/avatar.png" alt="avatar">
+                        <div class="member__name">
+                            <p class="member__firstname">Андрей </p>
+                            <p class="member__secondname"> Верес </p>
+                        </div>
+
+                    </div>
+                    <p class="reviews__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus delectus, corrupti
+                        earum ipsum aliquam nulla qui dolores eveniet provident neque, assumenda sequi cupiditate! Optio
+                        suscipit odio molestiae ex ad?
+                    </p>
+
+                </div> -->

@@ -1,0 +1,303 @@
+/* width 768px */
+@media (max-width : 768px) {
+
+
+    /* HEADER */
+
+    .header {
+        margin-bottom: 50px;
+        background-size: cover;
+    }
+
+    .header__title {
+        font-size: 3em;
+    }
+
+    .worktime {
+        padding-top: 2em;
+        margin-bottom: 8em;
+    }
+
+
+
+    /* BENEFITS   */
+
+    .benefits__list {
+        padding: 30px 18px;
+    }
+
+    .benefits__title {
+        font-size: 2em;
+    }
+
+
+
+    /* SERVICES */
+
+    .services {
+        margin-bottom: 70px;
+    }
+
+    .services__item {
+        margin: 10px;
+
+    }
+
+    .services__list {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+
+    /* SPECIALISTS */
+
+    .specialist__text {
+        margin-bottom: 50px;
+    }
+
+    .specialists__list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .specialists__item {
+        padding: 20px;
+    }
+
+
+
+    /* CHECKLIST */
+
+    .checklist__box {
+        overflow: hidden;
+    }
+
+    .checklist__text {
+        padding: 20px 40px 156px 0px;
+    }
+
+    .checklist__item {
+        position: relative;
+        z-index: 2;
+    }
+
+    .chelist__img {
+        top: 161px;
+        left: calc(50% - 359px);
+    }
+}
+
+/* width 480 */
+@media (max-width : 480px) {
+
+
+    /* HEADER  */
+
+    .header {
+        margin-bottom: 20px;
+    }
+
+    .header__btns {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* BENEFITS */
+
+    .benefits {
+        margin-bottom: 40px;
+    }
+
+    .image__change {
+        display: none;
+    }
+
+    .change__content-box {
+        background-image: url(../images/change-image.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 400px;
+    }
+
+    .change__text {
+        color: #fff;
+    }
+
+
+    /* SERVICES */
+
+    .services__item {
+        padding: 10px 30px;
+    }
+
+
+    /* CHECKLIST */
+
+    .checklist__box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .chelist__img {
+        top: 119px;
+        left: calc(50% - 51px);
+    }
+
+    .submit__btn {
+        width: 90%;
+    }
+}
+
+
+/* width  320px */
+@media (max-width : 320px) {
+
+    .title {
+        font-size: 2em;
+    }
+
+   
+
+    /* HEADER  */
+
+    .header__title {
+        font-size: 2em;
+    }
+
+    .header__btns {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 200px;
+        text-align: center;
+    }
+
+    .orange__btn {
+        margin-bottom: 10px;
+    }
+
+    .calldoctor {
+        margin-left: 0;
+    }
+
+
+
+
+
+
+
+    /* BENEFITS  */
+
+    .benefits {
+        margin-bottom: 50px;
+    }
+
+    .benefits__list {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .benefits__title {
+        font-size: 1.5em;
+    }
+
+    .benefits__text {
+        font-size: 0.9em;
+    }
+
+
+
+
+
+
+
+    /* CHANGE  */
+
+    .change {
+        margin-bottom: 50px;
+    }
+
+    .change__content-box {
+        flex-wrap: wrap;
+        padding-top: 20px;
+    }
+
+    .image__change {
+        position: absolute;
+        z-index: -5;
+
+    }
+
+    .change__image-box {
+        transform: rotate(0deg);
+        width: 320px;
+
+    }
+
+    .change__image {
+        transform: rotate(0deg);
+    }
+
+    .change__text {
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 2px;
+    }
+
+
+
+
+    /* SERVICES */
+    .services__item-img {
+        max-width: 35px;
+        max-height: 35px;
+    }
+
+    .services__item {
+        max-width: 123px;
+        max-height: 123px;
+        margin: 5px;
+    }
+
+    .services__item-title {
+        margin-bottom: 0;
+        font-size: 0.8em;
+    }
+
+    .services__item-link {
+        font-size: 0.9em;
+    }
+
+    .gray__btn {
+        padding: 8px 10px;
+        max-width: 135px;
+    }
+
+
+
+
+    /* SPECIALISTS */
+
+    .specialist__text {
+        margin-bottom: 20px;
+    }
+
+    .specialists__list {
+        grid-template-columns: 1fr;
+    }
+
+    .specialists__item {
+        padding: 10px;
+    }
+
+
+    /* CHECKLIST */
+
+
+    .chelist__img {
+        top: 136px;
+        left: calc(50% - 144px);
+    }
+
+   
+}
