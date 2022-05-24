@@ -11,27 +11,22 @@ const carousel = (containerSelector , trackSelector,itemsSelector ,prevBtn ,next
     const itemWidth = container.clientWidth / slidesToShow;
     const movePosition = slidesToScroll * itemWidth;
 
-
     btnPrev.addEventListener('click', () => {
         const itemsLeft = Math.abs(position) / itemWidth;
 
-        position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-        
+        position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;  
+
         setPosition();
         checkBtns();
-
-       
-        
     });
 
     btnNext.addEventListener('click', () => {
         const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
+
         position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
+
         setPosition();
         checkBtns();
-       
-        console.log(position)
-
     });
 
     const setPosition = () => {
@@ -56,9 +51,7 @@ const carousel = (containerSelector , trackSelector,itemsSelector ,prevBtn ,next
     });
 
     checkBtns();
-
 };
-
 
 export default carousel;
 

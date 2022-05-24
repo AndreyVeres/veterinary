@@ -673,11 +673,13 @@ input {
 .reception__box {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .reception__img {
     position: absolute;
     top: -117px;
+    left: 100px;
 }
 
 

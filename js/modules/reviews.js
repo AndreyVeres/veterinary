@@ -9,12 +9,12 @@ const reviews = () => {
       this.parent = document.querySelector(parent);
     }
 
-      render() {
-        const div = document.createElement('div');
-        div.classList.add('reviews__item');
-        this.parent.append(div);
+    render() {
+      const div = document.createElement('div');
+      div.classList.add('reviews__item');
+      this.parent.append(div);
 
-        div.innerHTML = `
+      div.innerHTML = `
         <div class="member">
         <img class="member__avatar" src="images/avatar.png" alt="avatar">
         <div class="member__name">
@@ -28,7 +28,7 @@ const reviews = () => {
         </p>
               
               `;
-      }
+    }
   }
 
   const popupForm = document.querySelector('.popup__form');
@@ -46,17 +46,16 @@ const reviews = () => {
 
     const firstReview = new Reviews(reviewsName.value, reviewsArea.value, '.reviews__list').render();
     const comment = {
-      commentName : reviewsName.value ,
-      commentText : reviewsArea.value
+      commentName: reviewsName.value,
+      commentText: reviewsArea.value
     };
 
     popupForm.reset();
     form.style.display = 'none';
     document.body.style.overflow = '';
-  
-    localStorage.setItem('comment' , JSON.stringify(comment));
-    
-   
+
+    localStorage.setItem('comment', JSON.stringify(comment));
+
   }
 
 };
