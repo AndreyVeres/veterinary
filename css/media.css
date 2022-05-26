@@ -1,3 +1,19 @@
+/* width 1440 */
+@media (max-width : 1440px){
+    .grooming__text {
+        max-width: 270px;
+        padding: 20px;
+    }
+    
+    .slider__container {
+        left: 300px;
+    }
+}
+
+
+
+
+
 /* width 1024 */
 @media (max-width : 1024px) {
     .services__item {
@@ -9,14 +25,42 @@
     }
 
     .arrows {
-        width: 200px;
+        width: 210px;
+    }
+
+    .questions__content-box {
+        justify-content: space-evenly;
+    }
+
+    .questions__img {
+        max-width: 440px;
+        max-height: 280px;
+    }
+
+    .grooming__text {
+        margin: 330px auto 0px;
+        max-width: 600px;
+    }
+
+    .questions {
+        min-height: 450px;
+    }
+    .questions__list {
+        margin-left: 50px;
+    }
+
+    .slider__container {
+        left: 0;
     }
 }
 
+
+
+
+
+
 /* width 768px */
 @media (max-width : 768px) {
-
-
     .title {
         font-size: 2em;
     }
@@ -30,8 +74,6 @@
         margin: 0 auto;
     }
 
-    /* HEADER */
-
     .header {
         margin-bottom: 50px;
         background-size: cover;
@@ -40,15 +82,11 @@
     .header__title {
         font-size: 3em;
     }
-
+    
     .worktime {
         padding-top: 2em;
         margin-bottom: 8em;
     }
-
-
-
-    /* BENEFITS   */
 
     .benefits__list {
         padding: 30px 18px;
@@ -58,13 +96,9 @@
         font-size: 2em;
     }
 
-    /* CHANGE */
-
     .change__items {
         justify-content: space-between;
     }
-
-    /* SERVICES */
 
     .services {
         margin-bottom: 70px;
@@ -72,16 +106,12 @@
 
     .services__item {
         margin: 10px 25px;
-
     }
 
     .services__list {
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
-
-
-    /* SPECIALISTS */
 
     .specialist__text {
         margin-bottom: 50px;
@@ -94,10 +124,6 @@
     .specialists__item {
         padding: 20px;
     }
-
-
-
-    /* CHECKLIST */
 
     .checklist {
         margin-bottom: 70px;
@@ -147,14 +173,40 @@
     .reception__img {
         left: 30px;
     }
+
+    .questions__img {
+        max-width: 300px;
+        height: 220px;
+    }
+
+    .footer__box {
+        justify-content: space-between;
+    }
+
+    .footer__btn {
+        padding: 0 5px;
+        height: 50px;
+    }
+
+    .questions {
+        min-height: 475px;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* width 480 */
 @media (max-width : 480px) {
-
-
-    /* HEADER  */
-
     .header {
         margin-bottom: 20px;
     }
@@ -163,8 +215,6 @@
         max-width: 400px;
         margin: 0 auto;
     }
-
-    /* BENEFITS */
 
     .benefits {
         margin-bottom: 40px;
@@ -191,15 +241,9 @@
         color: #fff;
     }
 
-
-    /* SERVICES */
-
     .services__item {
         padding: 10px 30px;
     }
-
-
-    /* CHECKLIST */
 
     .checklist__box {
         display: flex;
@@ -215,7 +259,6 @@
         width: 90%;
     }
 
-
     .slider__container {
         width: 450px;
     }
@@ -229,6 +272,17 @@
         margin: 119px auto;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* width 425px */
@@ -246,6 +300,7 @@
     .gray__btn {
         padding: 15px 10px;
     }
+
     .calldoctor {
         margin-left: 0;
     }
@@ -303,9 +358,7 @@
         width: 400px;
         left: calc(50% - 200px);
         height: 320px;
-
     }
-
 
     .reviews__header {
         display: flex;
@@ -315,18 +368,15 @@
 
     .arrow {
         width: 50px;
-
     }
 
     .arrow+.arrow {
         margin-left: 5px;
-
     }
 
     .reviews__title,
     .grooming__title {
         margin-bottom: 10px;
-
     }
 
     .arrows {
@@ -335,7 +385,6 @@
         margin: 10px 0px;
         order: 1;
     }
-
 
     .grooming__header {
         display: flex;
@@ -349,7 +398,6 @@
         text-align: center;
         margin: 142px auto;
         padding: 0;
-
     }
 
     .grooming {
@@ -363,7 +411,51 @@
     .reception__form {
         margin: 70px auto 0px;
     }
+
+    .questions__img {
+        display: none;
+    }
+
+    .questions__header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .questions__title-main {
+        margin-bottom: 10px;
+    }
+
+    .footer__box {
+        flex-direction: column;
+    }
+
+    .logo__title {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer__btn {
+        margin-bottom: 20px;
+    }
+
+    .footer__title {
+        margin-bottom: 10px;
+    }
+
+    .questions {
+        min-height: 520px;
+    }
 }
+
+
+
+
+
+
+
+
+
+
 
 /* width 375px */
 @media (max-width : 375px) {
@@ -391,7 +483,6 @@
         width: 350px;
         left: calc(50% - 175px);
         height: 290px;
-
     }
 
     .reception__form {
@@ -399,41 +490,36 @@
         margin: 140px auto 0px;
     }
 
+    .questions__list {
+        margin-left: 35px;
+    }
 
-
+    .questions {
+        min-height: 550px;
+    }
 }
+
+
+
+
+
+
+
 
 
 /* width  320px */
 @media (max-width : 320px) {
-
     .title {
         font-size: 2em;
     }
-
-
-
-    /* HEADER  */
 
     .header__title {
         font-size: 2em;
     }
 
-
-
     .orange__btn {
         margin-bottom: 10px;
     }
-
-   
-
-
-
-
-
-
-
-    /* BENEFITS  */
 
     .benefits {
         margin-bottom: 50px;
@@ -452,14 +538,6 @@
         font-size: 0.9em;
     }
 
-
-
-
-
-
-
-    /* CHANGE  */
-
     .change {
         margin-bottom: 50px;
     }
@@ -472,13 +550,11 @@
     .image__change {
         position: absolute;
         z-index: -5;
-
     }
 
     .change__image-box {
         transform: rotate(0deg);
         width: 320px;
-
     }
 
     .change__image {
@@ -491,10 +567,6 @@
         margin-bottom: 2px;
     }
 
-
-
-
-    /* SERVICES */
     .services__item-img {
         max-width: 35px;
         max-height: 35px;
@@ -520,11 +592,6 @@
         max-width: 135px;
     }
 
-
-
-
-    /* SPECIALISTS */
-
     .specialist__text {
         margin-bottom: 20px;
     }
@@ -537,8 +604,6 @@
         padding: 10px;
     }
 
-
-    /* CHECKLIST */
     .checklist {
         min-height: 770px;
     }
@@ -551,7 +616,6 @@
     .slider__container {
         width: 300px;
     }
-
 
     .grooming__title {
         font-size: 1.8em;
@@ -571,7 +635,13 @@
         width: 300px;
         left: calc(50% - 150px);
         height: 250px;
-
     }
 
+    .questions__title-main {
+       font-size: 1.9em;
+    }
+    
+    .questions {
+        min-height: 650px;
+    }
 }

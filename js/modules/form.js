@@ -1,5 +1,5 @@
-const forms = () => {
-    const forms = document.querySelector('.form');
+const forms = (formSelector) => {
+    const forms = document.querySelector(formSelector);
 
 
     const message = {
@@ -7,7 +7,7 @@ const forms = () => {
         success : 'Данные отправленн',
         failure : 'Что-то сломалось',
         wrongValue : 'корректно заполните все поля'
-    }
+    };
    
     forms.addEventListener('submit' , formSend);
 
@@ -18,8 +18,7 @@ const forms = () => {
         const messageStatus = document.createElement('div');
         messageStatus.textContent = message.loading;
         forms.append(messageStatus);
-
-        
+      
         
         let formData = new FormData(forms);
         formData.append("id" , Math.random());
@@ -30,11 +29,11 @@ const forms = () => {
             obj[key] = value;
         });
 
-        
+       
        
         if(error === 0) {
-            
-            let response = await fetch('http://localhost:3000/people' , {
+          
+            let response = await fetch('./server.php', {
                 method : 'POST',
                 headers : {
                     'content-type': 'application/json'
@@ -50,6 +49,7 @@ const forms = () => {
         }else {
             messageStatus.textContent = message.wrongValue;
         }
+        
         if(messageStatus){
             document.querySelector('.submit__btn').disabled = true;
             setTimeout(() => {
@@ -61,6 +61,7 @@ const forms = () => {
       
         setTimeout(() => {
             messageStatus.remove()
+           
         }, 1000);
        
     }
@@ -68,19 +69,21 @@ const forms = () => {
    
     function formValidate(form) {
         
-        let error =0;
+        let error = 0;
 
-        const formReq  = document.querySelectorAll('._valid');
-    
+        const formReq  = form.querySelectorAll('._valid');
+       
      
         for (let index = 0; index < formReq.length; index++) {
             const input = formReq[index];
-            formRemoveError(input);
             
+            formRemoveError(input);
+           
             if(input.classList.contains('_email')){
                 if(!emailTest(input)){
                     formAddError(input);
                     error++;
+                  
                 }
             }
             if(input.value === '' && input.classList.contains('_login')) {
@@ -91,7 +94,7 @@ const forms = () => {
         }
 
      
-
+        
         return error;
 
     }
@@ -108,7 +111,7 @@ const forms = () => {
 
     function emailTest(input) {
 
-        return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(String(input.value).toLocaleLowerCase());
+        return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(input.value);
     }
 
     

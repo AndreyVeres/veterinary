@@ -98,7 +98,7 @@
 
     </section>
 
-   
+
     <section class="services">
         <div class="container">
             <div class="services__header">
@@ -131,7 +131,7 @@
             </ul>
         </div>
     </section>
- 
+
 
     <section class="specialists">
         <div class="container">
@@ -165,12 +165,12 @@
                         обязательных плановых процедур</p>
                 </div>
                 <div class="checklist__item">
-                    <form class="form" action="server.php" method="post">
+                    <form class="form checklist__form" action="server.php" method="post">
                         <div class="inputs__box">
                             <input class="_valid _login" type="text" name="name" placeholder="Ваше имя">
                             <input class="_valid _email" type="email" name="email" placeholder="E-mail">
                         </div>
-
+                        <!-- <button class="submit__btn" value="Получить чек-лист"></button> -->
                         <input class="submit__btn" type="submit" value="Получить чек-лист">
                     </form>
                 </div>
@@ -186,10 +186,7 @@
         <div class="container reviews__container">
             <div class="reviews__header">
                 <h2 class="title reviews__title">Отзывы</h2>
-                <div class="arrows">
-                    <img class="arrow arrow-prev" src="images/arrow.png" alt="arrow">
-                    <img class="arrow arrow-next" src="images/arrow.png" alt="arrow">
-                </div>
+
                 <a class="gray__btn reviews__btn" href="#">Оставить отзыв</a>
             </div>
 
@@ -241,7 +238,10 @@
 
             <div class="grooming__box">
                 <div class="grooming__text">
-                    Сложно быть спокойным, глядя как любимый пушистик постоянно чешется и тем более страдает от паразитов. Колтуны и свалявшаяся отросшая шерсть — отличная среда обитания для блох и клещей, а собака при этом ужасно страдает. Избавить своего любимчика от страданий легко, достаточно ухаживать за шерстью, как вы ухаживаете за своими волосами: регулярно мыть, расчесывать и стричь.
+                    Сложно быть спокойным, глядя как любимый пушистик постоянно чешется и тем более страдает от
+                    паразитов. Колтуны и свалявшаяся отросшая шерсть — отличная среда обитания для блох и клещей, а
+                    собака при этом ужасно страдает. Избавить своего любимчика от страданий легко, достаточно ухаживать
+                    за шерстью, как вы ухаживаете за своими волосами: регулярно мыть, расчесывать и стричь.
 
                 </div>
                 <div class="item__modal">
@@ -311,14 +311,14 @@
                     <img class="reception__img" src="images/reception-img.png" alt="img">
                 </div>
 
-                 <form class="reception__form form" action="server.php" method="post">
+                <form class="reception__form form" action="server.php" method="post">
                     <div class="inputs__box reception__inputs">
                         <input class="_valid _login" type="text" name="name" placeholder="Ваше имя">
                         <input class="_valid _email" type="email" name="email" placeholder="E-mail">
                     </div>
 
                     <input class="submit__btn" type="submit" value="Записаться на приём">
-                </form> 
+                </form>
             </div>
 
         </div>
@@ -328,7 +328,7 @@
     <section class="questions">
         <div class="container">
             <div class="questions__header">
-                <h2 class="title">Ответы на частые вопросы</h2>
+                <h2 class="title questions__title-main">Ответы на частые вопросы</h2>
                 <a class="gray__btn" href="#">смотреть все вопросы</a>
             </div>
 
@@ -336,14 +336,18 @@
                 <ul class="questions__list">
                     <li class="questions__item">
                         <h5 class="questions__title">Как правильно сдавать анализы?</h5>
-                        <p class="questions__answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum,
-                            aliquam.</p>
+                        <p class="questions__answer">Категорически нельзя: Кормить животное менее чем за 8 часов до
+                            исследования. Хоть пища для питомцев (готовые рационы питания, сухие корма) не может
+                            изменить результаты слишком сильно, ветеринарные специалисты рекомендуют сдавать анализы
+                            крови натощак</p>
                     </li>
 
                     <li class="questions__item">
                         <h5 class="questions__title">Подготовка к стерилизации</h5>
-                        <p class="questions__answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum,
-                            aliquam.</p>
+                        <p class="questions__answer">Как минимум за 12 часов до операции по стерилизации животное нужно
+                            прекратить кормить. За 5 часов до нее следует убрать воду. Перед операцией кошку взвешивают,
+                            подают наркоз и оперируют. Вся операция длится примерно 5-10 минут у самцов и 20 минут у
+                            самок .</p>
                     </li>
 
                     <li class="questions__item">
@@ -354,8 +358,9 @@
 
                     <li class="questions__item">
                         <h5 class="questions__title">Правила плановой вакцинации</h5>
-                        <p class="questions__answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum,
-                            aliquam.</p>
+                        <p class="questions__answer">Прежде чем перейти к рассмотрению конкретных рекомендаций по
+                            вакцинации, мы приведем
+                            краткий обзор видов имеющихся в наличии вакцин для животных-компаньонов.</p>
                     </li>
 
                 </ul>
@@ -365,13 +370,13 @@
         </div>
     </section>
 
-<!-- 
+
     <footer class="footer">
         <div class="container">
             <div class="footer__box">
                 <div class="footer__logo">
                     <img class="logo" src="images/logo.svg" alt="logo">
-                    <p class="logo__title title">Работаем круглосуточно и без выходных</p>
+                    <h2 class="logo__title title">Работаем круглосуточно и без выходных</h2>
                 </div>
                 <div class="menu">
                     <h3 class="menu__title footer__title">Меню</h3>
@@ -417,7 +422,26 @@
     </footer>
 
 
- -->
+    <!-- <div class="form__popup">
+        <div class="container">
+            <div class="popup__box">
+                <div class="popup__btns">
+                    <button>Записаться на приём</button>
+                    <button>Вызвать врача</button>
+                </div>
+                <div class="popup__forms">
+                    <form class="registration__form-popup" action="server.php" method="post">
+                        <div class="popup__inputs">
+                            <input class="_valid _login" type="text" name="name" placeholder="Ваше имя">
+                            <input class="_valid _email" type="email" name="email" placeholder="E-mail">
+                        </div>
+
+                        <input class="submit__btn" type="submit" value="Записаться на приём">
+                        <form class="form__callDoctor-popup" action="#" method="post"></form>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
 
 

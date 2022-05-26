@@ -1,6 +1,4 @@
 const fullScreen = () => {
-
-
     const parent = document.querySelector('.slider__container');
     const modal = document.querySelector('.item__modal');
     const modalImg = document.querySelector('.modal__img');
@@ -14,7 +12,6 @@ const fullScreen = () => {
     leftBtn.addEventListener('click', imageLeft);
     righttBtn.addEventListener('click', imageRight);
    
-
     function showModal(e) {
         let t = e.target;
 
@@ -59,7 +56,7 @@ const fullScreen = () => {
 
     function imageRight() {
         if (srcIndex === imagesSrc.length - 1) {
-            srcIndex = -1;  //НИПАНИМАЮПАМАГИТИ
+            srcIndex = -1;  
         }
         modalImg.src = imagesSrc[srcIndex + 1];
         srcIndex = srcIndex + 1;
