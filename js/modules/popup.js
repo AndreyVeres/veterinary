@@ -1,31 +1,35 @@
-const popup = (openSelector , popupSelector ) => {
+const popup = (openSelector, popupSelector) => {
     const btn = document.querySelector(openSelector);
     const popup = document.querySelector(popupSelector);
-const scroll = calculateScroll();
-    btn.addEventListener ('click' , function(event) {
-     showPopup(event ,openSelector);
+    const scroll = calculateScroll();
+    btn.addEventListener('click', function (event) {
+        showPopup(event, openSelector);
     });
 
-    popup.addEventListener('click' ,function(e){
-        closePopup(e,popupSelector);
+    popup.addEventListener('click', function (e) {
+        closePopup(e, popupSelector);
     });
 
-    function showPopup(event , openSelector){
+    function showPopup(event, openSelector) {
         event.preventDefault();
-        popup.style.display = 'block';
+        // popup.style.display = 'block'
+        popup.style.visibility = 'visible';
+        popup.style.opacity = '1';
         document.body.style.overflow = 'hidden';
         document.body.style.marginRight = `${scroll}px`;
     }
 
-    function closePopup(event,popupSelector) {
-        if(event.target === popup){
-            popup.style.display ='none';
+    function closePopup(event, popupSelector) {
+        if (event.target === popup) {
+            // popup.style.display = 'none'
+            popup.style.visibility = 'hidden';
+            popup.style.opacity = '0';
             document.body.style.overflow = '';
             document.body.style.marginRight = '';
-        } 
+        }
     }
 
-    function calculateScroll () {
+    function calculateScroll() {
         let div = document.createElement('div');
 
         div.style.width = '50px';
@@ -40,7 +44,7 @@ const scroll = calculateScroll();
         return scrollWidth;
     }
 
-   
+
 
 }
 

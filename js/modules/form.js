@@ -1,6 +1,5 @@
 const forms = (formSelector) => {
-    const forms = document.querySelector(formSelector);
-
+    const forms = document.querySelectorAll(formSelector);
 
     const message = {
         loading : 'Загрузка' ,
@@ -9,21 +8,22 @@ const forms = (formSelector) => {
         wrongValue : 'корректно заполните все поля'
     };
    
-    forms.addEventListener('submit' , formSend);
+    forms.forEach(form => {
+        form.addEventListener('submit' , formSend);
+    });
 
     async function formSend(event) {
         event.preventDefault();
-       
-        let error = formValidate(forms);
+
+        let error = formValidate(this);
         const messageStatus = document.createElement('div');
         messageStatus.textContent = message.loading;
-        forms.append(messageStatus);
+        this.append(messageStatus);
        
-        let formData = new FormData(forms);
+        let formData = new FormData(this);
         formData.append("id" , Math.random());
 
         let obj = {};
-
         formData.forEach((value , key) => {
             obj[key] = value;
         });
@@ -37,13 +37,15 @@ const forms = (formSelector) => {
                 },
                 body : JSON.stringify(obj)
             });
+            
             if(response.ok) {
                 messageStatus.textContent = message.success;
-                forms.reset();
+                this.reset();
             }else {
                 messageStatus.textContent = message.failure;
             }
-        }else {
+        }
+        else {
             messageStatus.textContent = message.wrongValue;
         }
         
@@ -51,29 +53,28 @@ const forms = (formSelector) => {
             document.querySelector('.submit__btn').disabled = true;
             setTimeout(() => {
                 document.querySelector('.submit__btn').disabled = false;
-            }, 1000);
+            }, 2000);
         }
 
         setTimeout(() => {
             messageStatus.remove()
-        }, 1000);
+        }, 2000);
     }
 
     function formValidate(form) {
         
         let error = 0;
-
         const formReq  = form.querySelectorAll('._valid');
-      
      
         for (let index = 0; index < formReq.length; index++) {
             const input = formReq[index];
             
             formRemoveError(input);
+
             if(input.classList.contains('phone')){
                 if(!phoneTest(input)){
                     formAddError(input);
-                    error++
+                    error++;
                 }
             }
 
@@ -97,7 +98,6 @@ const forms = (formSelector) => {
 
     }
 
-
     function formAddError(input) {
         input.classList.add('_error');
     }
@@ -106,9 +106,7 @@ const forms = (formSelector) => {
         input.classList.remove('_error');
     }
     
-
     function emailTest(input) {
-
         return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(input.value);
     }
 
@@ -116,7 +114,6 @@ const forms = (formSelector) => {
         return /^\d[\d\(\)\ -]{4,14}\d$/.test(input.value);
     }
 
-    
 };
 
 

@@ -9,10 +9,7 @@ import smoothScroll from './modules/smoothScroll.js';
 window.addEventListener('DOMContentLoaded', () => {
 
         carousel('.slider__container', '.slider__track', '.slider__item', '.slider__prev', '.slider__next', 3, 1);
-        forms('.checklist__form');
-        forms('.reception__form');
-        
-        forms('.reception__form-popup')
+        forms('form');
         fullScreen();
         reviews();
         popup('.reviews__btn', '.reviews__popup');
