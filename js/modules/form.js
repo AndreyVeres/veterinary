@@ -18,8 +18,7 @@ const forms = (formSelector) => {
         const messageStatus = document.createElement('div');
         messageStatus.textContent = message.loading;
         forms.append(messageStatus);
-      
-        
+       
         let formData = new FormData(forms);
         formData.append("id" , Math.random());
 
@@ -29,8 +28,6 @@ const forms = (formSelector) => {
             obj[key] = value;
         });
 
-       
-       
         if(error === 0) {
           
             let response = await fetch('./server.php', {
@@ -56,45 +53,46 @@ const forms = (formSelector) => {
                 document.querySelector('.submit__btn').disabled = false;
             }, 1000);
         }
-       
-           
-      
+
         setTimeout(() => {
             messageStatus.remove()
-           
         }, 1000);
-       
     }
 
-   
     function formValidate(form) {
         
         let error = 0;
 
         const formReq  = form.querySelectorAll('._valid');
-       
+      
      
         for (let index = 0; index < formReq.length; index++) {
             const input = formReq[index];
             
             formRemoveError(input);
-           
+            if(input.classList.contains('phone')){
+                if(!phoneTest(input)){
+                    formAddError(input);
+                    error++
+                }
+            }
+
+            if(input.value === ''){
+                formAddError(input);
+                error++;
+            }
             if(input.classList.contains('_email')){
                 if(!emailTest(input)){
                     formAddError(input);
-                    error++;
-                  
+                    error++;    
                 }
             }
             if(input.value === '' && input.classList.contains('_login')) {
                 formAddError(input)
                 error++;
             }
-            
         }
 
-     
-        
         return error;
 
     }
@@ -112,6 +110,10 @@ const forms = (formSelector) => {
     function emailTest(input) {
 
         return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(input.value);
+    }
+
+    function phoneTest(input){
+        return /^\d[\d\(\)\ -]{4,14}\d$/.test(input.value);
     }
 
     

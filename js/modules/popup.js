@@ -37,7 +37,7 @@ const scroll = calculateScroll();
         let scrollWidth = div.offsetWidth - div.clientWidth;
         div.remove();
 
-        return scrollWidth
+        return scrollWidth;
     }
 
    

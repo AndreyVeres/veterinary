@@ -43,7 +43,6 @@ const reviews = () => {
     const reviewsName = document.querySelector('.reviews__name');
     const reviewsArea = document.querySelector('.reviews__area');
 
-
     const firstReview = new Reviews(reviewsName.value, reviewsArea.value, '.reviews__list').render();
     const comment = {
       commentName: reviewsName.value,
@@ -53,9 +52,6 @@ const reviews = () => {
     popupForm.reset();
     form.style.display = 'none';
     document.body.style.overflow = '';
-
-    localStorage.setItem('comment', JSON.stringify(comment));
-
   }
 
 };

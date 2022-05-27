@@ -11,10 +11,12 @@ window.addEventListener('DOMContentLoaded', () => {
         carousel('.slider__container', '.slider__track', '.slider__item', '.slider__prev', '.slider__next', 3, 1);
         forms('.checklist__form');
         forms('.reception__form');
-        // forms('.registration__form-popup')
+        
+        forms('.reception__form-popup')
         fullScreen();
         reviews();
         popup('.reviews__btn', '.reviews__popup');
         dropdown();
         smoothScroll();
+        popup('.calldoctor' , '.calldoctor__popup');
 });
