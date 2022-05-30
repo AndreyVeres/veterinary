@@ -5,6 +5,7 @@ import reviews from './modules/reviews.js';
 import popup from './modules/popup.js';
 import dropdown from './modules/dropdown.js';
 import smoothScroll from './modules/smoothScroll.js';
+import scrollToTop from './modules/ScrollToTop.js';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -12,8 +13,10 @@ window.addEventListener('DOMContentLoaded', () => {
         forms('form');
         fullScreen();
         reviews();
+        scrollToTop('.arrowToTop')
         popup('.reviews__btn', '.reviews__popup');
         dropdown();
-        smoothScroll();
+        smoothScroll('.footer__btn' , '.reception');
         popup('.calldoctor' , '.calldoctor__popup');
+        popup('.orange__btn' , '.registration__popup');
 });

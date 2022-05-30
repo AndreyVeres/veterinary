@@ -1,6 +1,9 @@
 const dropdown = () => {
     const btns = document.querySelectorAll('.questions__title');
     const windows = document.querySelectorAll('.questions__answer');
+
+    btns[0].nextElementSibling.style.maxHeight = btns[0].nextElementSibling.scrollHeight + 'px';
+    
     btns.forEach(btn => {
         btn.addEventListener('click', function () {
             let window = this.nextElementSibling;
@@ -16,7 +19,6 @@ const dropdown = () => {
 
         });
     });
-
 };
 
 export default dropdown;

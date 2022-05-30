@@ -77,7 +77,7 @@
                 </div>
                 <div class="change__items image__change">
                     <div class="change__image-box">
-                        <img class="change__img" src="images/change-image.jpg" alt="image">
+
                         <div class="change__image"></div>
                     </div>
 
@@ -232,7 +232,7 @@
                     <img class="arrow slider__prev arrow-prev" src="images/arrow.png" alt="arrow">
                     <img class="arrow slider__next arrow-next" src="images/arrow-right.png" alt="arrow">
                 </div>
-                <a class="gray__btn" href="#">Открыть галерею</a>
+                <a class="gray__btn gallery__btn" href="#">Открыть галерею</a>
             </div>
 
 
@@ -245,10 +245,14 @@
 
                 </div>
                 <div class="item__modal">
-                    <span class="close__modal">close</span>
+                    <!-- <span class="close__modal">close</span> -->
+                    <img class="close__modal" src="images/modal__close.png" alt="">
                     <div class="modal__arrows">
-                        <span class="modal__arrow-left"> left </span>
-                        <span class="modal__arrow-right"> right</span>
+                        <!-- <span class="modal__arrow-left"> left </span>
+                        <span class="modal__arrow-right"> right</span> -->
+
+                        <img class="modal__arrow-left modal__arrow" src="images/modal-arrow-left.png" alt="">
+                        <img class="modal__arrow-right modal__arrow" src="images/modal-arrow-right.png" alt="">
                     </div>
 
                     <img class="modal__img" src="" alt="image">
@@ -260,21 +264,21 @@
 
 
                         <div class="slider__item">
-                            <img class="slider__img" src="images/grooming.jpg" alt="">
+                            <img class="slider__img" src="images/groomFotos/groom.jpg" alt="">
                         </div>
                         <div class="slider__item">
-                            <img class="slider__img" src="images/grooming-2.jpg" alt="">
-                        </div>
-
-                        <div class="slider__item">
-                            <img class="slider__img" src="images/grooming-3.jpg" alt="">
+                            <img class="slider__img" src="images/groomFotos/groom-2.jpg" alt="">
                         </div>
 
                         <div class="slider__item">
-                            <img class="slider__img" src="images/grooming-2.jpg" alt="">
+                            <img class="slider__img" src="images/groomFotos/groom-4.jpg" alt="">
+                        </div>
+
+                        <div class="slider__item">
+                            <img class="slider__img" src="images/groomFotos/groom-5.jpg" alt="">
                         </div>
                         <div class="slider__item">
-                            <img class="slider__img" src="images/grooming.jpg" alt="">
+                            <img class="slider__img" src="images/groomFotos/groom-3.png" alt="">
                         </div>
                         <div class="slider__item">
                             <img class="slider__img" src="images/grooming-2.jpg" alt="">
@@ -423,29 +427,55 @@
 
 
     <div class="popup calldoctor__popup">
-       
-            <div class="calldoctor__box">
 
-                <h2 class="title">Вызвать врача на дом</h2>
+        <div class="calldoctor__box">
 
-
-                <form class="reception__form-popup" action="#" method="post">
-                    <div class="reception__item">
-                        <input class="_valid" type="text" name="name" placeholder="Введите имя">
-                    </div>
-                    <div class="reception__item">
-                        <input class="phone _valid" type="tel" name="tel" placeholder="Номер телефона">
-                    </div>
+            <h2 class="title">Вызвать врача на дом</h2>
 
 
-                    <button class="submit__btn">Отправить заявку</button>
-                </form>
+            <form class="reception__form-popup" action="#" method="post">
+                <div class="reception__item">
+                    <input class="_valid" type="text" name="name" placeholder="Введите имя">
+                </div>
+                <div class="reception__item">
+                    <input class="phone _valid" type="tel" name="tel" placeholder="Номер телефона">
+                </div>
 
 
-            </div>
-       
+                <button class="submit__btn">Отправить заявку</button>
+            </form>
+
+
+        </div>
+
     </div>
 
+    <div class="registration__popup popup">
+        
+        <div class="calldoctor__box">
+
+            <h2 class="title">Записаться на приём</h2>
+
+
+            <form class="reception__form-popup" action="#" method="post">
+                <div class="reception__item">
+                    <input class="_valid" type="text" name="name" placeholder="Введите имя">
+                </div>
+                <div class="reception__item">
+                    <input class="_valid _email" type="email" name="email" placeholder="E-mail">
+                </div>
+
+
+                <button class="submit__btn">Отправить заявку</button>
+            </form>
+
+
+        </div>
+    </div>
+
+
+
+    <img class="arrowToTop" src="images/arrowTop.png" alt="">
 
 
 

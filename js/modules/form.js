@@ -16,8 +16,11 @@ const forms = (formSelector) => {
         event.preventDefault();
 
         let error = formValidate(this);
+
         const messageStatus = document.createElement('div');
+        
         messageStatus.textContent = message.loading;
+        messageStatus.classList.add('status');
         this.append(messageStatus);
        
         let formData = new FormData(this);
@@ -88,10 +91,7 @@ const forms = (formSelector) => {
                     error++;    
                 }
             }
-            if(input.value === '' && input.classList.contains('_login')) {
-                formAddError(input)
-                error++;
-            }
+        
         }
 
         return error;
