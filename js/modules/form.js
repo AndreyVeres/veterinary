@@ -32,7 +32,6 @@ const forms = (formSelector) => {
         });
 
         if(error === 0) {
-          
             let response = await fetch('./server.php', {
                 method : 'POST',
                 headers : {
@@ -64,8 +63,7 @@ const forms = (formSelector) => {
         }, 2000);
     }
 
-    function formValidate(form) {
-        
+    function formValidate(form) {  
         let error = 0;
         const formReq  = form.querySelectorAll('._valid');
      
@@ -93,9 +91,7 @@ const forms = (formSelector) => {
             }
         
         }
-
         return error;
-
     }
 
     function formAddError(input) {
@@ -117,100 +113,3 @@ const forms = (formSelector) => {
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function moveDog() {
-//     const dog = document.querySelector('.reception__img');
-//     dog.setAttribute('src' , 'images/convert.png')
-//     dog.style.width = 782 +'px';
-//     dog.style.height = 520 + 'px';
-//     dog.style.left = 189 +'px';
-// }
-
-export default forms;
-
-
-
-
-
-
-
-// const forms = () => {
-//     const forms = document.querySelectorAll('.form');
-//     const inputs = document.querySelectorAll('input');
-//     const message = {
-//         loading: 'загрузка',
-//         success: 'Данные успешно отправлены',
-//         failure: 'Что-то пошло не так',
-//     };
-
-//     const clearInputs = () => {
-//         inputs.forEach(input => {
-//             if (input.type === 'submit') {
-//                 return false;
-//             }
-//             input.value = '';
-//         });
-//     }
-
-//     const postData = async (url, data) => {
-//         document.querySelector('.status').textContent = message.success;
-
-//         let result = await fetch(url, {
-//             method: 'POST',
-//             body: data,
-//         });
-
-//         return await result.text();
-//     };
-
- 
-
-
-//     forms.forEach(item => {
-//         item.addEventListener('submit', (e) => {
-//             e.preventDefault();
-//             inputs.forEach(input => {
-//                 if(input.value === '') {
-//                     return ;
-//                 }
-                
-//             });
-//             const statusMessage = document.createElement('div');
-            
-//             statusMessage.classList.add('status');
-//             item.append(statusMessage);
- 
-//             const formData = new FormData(item);
-           
-//             postData('../server.php', formData)
-//                 .then(res => {
-//                     console.log(res)
-//                     statusMessage.textContent = message.success
-//                 })
-//                 .catch(() => {
-//                     statusMessage.textContent = message.failure;
-//                 })
-//                 .finally(() => {
-//                     clearInputs();
-//                     setTimeout(() => {
-//                         statusMessage.remove();
-//                     }, 1500);
-//                 })
-//         });
-//     });
-// };

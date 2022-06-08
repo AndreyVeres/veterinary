@@ -1,7 +1,6 @@
 const dropdown = () => {
     const btns = document.querySelectorAll('.questions__title');
     const windows = document.querySelectorAll('.questions__answer');
-
     btns[0].nextElementSibling.style.maxHeight = btns[0].nextElementSibling.scrollHeight + 'px';
     
     btns.forEach(btn => {
@@ -12,7 +11,6 @@ const dropdown = () => {
                     window.style.maxHeight = '';
                 }
             });
-
             if (window.style.maxHeight === '') {
                 window.style.maxHeight = window.scrollHeight + 'px';
             } 

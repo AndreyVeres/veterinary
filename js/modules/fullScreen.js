@@ -21,7 +21,6 @@ const fullScreen = () => {
 
     function showModal(e) {
         let t = e.target;
-
         if (t.classList.contains('slider__img')) {
             modal.style.display = 'block';
             modalImg.src = t.src;
@@ -30,7 +29,6 @@ const fullScreen = () => {
 
     function hideModal(e) {
         let t = e.target;
-
         if (t === closeModal || t === modal) {
             modal.style.display = 'none';
         }
