@@ -113,3 +113,6 @@ const forms = (formSelector) => {
 };
 
 
+export default forms
+
+
