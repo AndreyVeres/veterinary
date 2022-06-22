@@ -1,14 +1,11 @@
 const scrollToTop = (btnSelector) => {
     const btn = document.querySelector(btnSelector);
-
     document.addEventListener('scroll', () => {
-        
         if (document.documentElement.scrollTop > 1000) {
             btn.classList.add('arrowToTopShow');
         }else{
             btn.classList.remove('arrowToTopShow');
         }
-   
     });
 
     btn.addEventListener('click' ,()=> {
@@ -17,6 +14,5 @@ const scrollToTop = (btnSelector) => {
             behavior : 'smooth'
         })
     });
-}
-
+};
 export default scrollToTop

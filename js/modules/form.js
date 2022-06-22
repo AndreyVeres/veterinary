@@ -1,6 +1,5 @@
 const forms = (formSelector) => {
     const forms = document.querySelectorAll(formSelector);
-
     const message = {
         loading : 'Загрузка' ,
         success : 'Данные отправленн',
@@ -14,23 +13,17 @@ const forms = (formSelector) => {
 
     async function formSend(event) {
         event.preventDefault();
-
         let error = formValidate(this);
-
         const messageStatus = document.createElement('div');
-        
         messageStatus.textContent = message.loading;
         messageStatus.classList.add('status');
         this.append(messageStatus);
-       
         let formData = new FormData(this);
         formData.append("id" , Math.random());
-
         let obj = {};
         formData.forEach((value , key) => {
             obj[key] = value;
         });
-
         if(error === 0) {
             let response = await fetch('./server.php', {
                 method : 'POST',
@@ -39,7 +32,6 @@ const forms = (formSelector) => {
                 },
                 body : JSON.stringify(obj)
             });
-            
             if(response.ok) {
                 messageStatus.textContent = message.success;
                 this.reset();
@@ -50,35 +42,29 @@ const forms = (formSelector) => {
         else {
             messageStatus.textContent = message.wrongValue;
         }
-        
         if(messageStatus){
             document.querySelector('.submit__btn').disabled = true;
             setTimeout(() => {
                 document.querySelector('.submit__btn').disabled = false;
             }, 2000);
         }
-
         setTimeout(() => {
-            messageStatus.remove()
+            messageStatus.remove();
         }, 2000);
     }
-
     function formValidate(form) {  
         let error = 0;
         const formReq  = form.querySelectorAll('._valid');
-     
         for (let index = 0; index < formReq.length; index++) {
             const input = formReq[index];
-            
+        
             formRemoveError(input);
-
             if(input.classList.contains('phone')){
                 if(!phoneTest(input)){
                     formAddError(input);
                     error++;
                 }
             }
-
             if(input.value === ''){
                 formAddError(input);
                 error++;
@@ -89,7 +75,6 @@ const forms = (formSelector) => {
                     error++;    
                 }
             }
-        
         }
         return error;
     }
@@ -113,3 +98,4 @@ const forms = (formSelector) => {
 };
 
 
+export default forms;

@@ -8,6 +8,5 @@ const smoothScroll = (bntSelector , toScrollSelector) => {
             behavior: "smooth"
        }); 
     });
-}
-
+};
 export default smoothScroll;

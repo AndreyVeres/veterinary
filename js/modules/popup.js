@@ -43,9 +43,6 @@ const popup = (openSelector, popupSelector) => {
 
         return scrollWidth;
     }
-
-
-
-}
+};
 
 export default popup;

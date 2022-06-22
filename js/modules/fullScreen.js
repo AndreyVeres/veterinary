@@ -34,7 +34,6 @@ const fullScreen = () => {
         }
     }
 
-
     let src = null;
     let srcIndex = null;
     const imagesSrc = [];

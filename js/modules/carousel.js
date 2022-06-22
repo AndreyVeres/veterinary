@@ -48,7 +48,6 @@ const carousel = (containerSelector, trackSelector, itemsSelector, prevBtn, next
 
     checkBtns();
 };
-
 export default carousel;
 
 

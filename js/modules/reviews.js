@@ -13,7 +13,6 @@ const reviews = () => {
       const div = document.createElement('div');
       div.classList.add('reviews__item');
       this.parent.append(div);
-
       div.innerHTML = `
         <div class="member">
         <img class="member__avatar" src="images/avatar.png" alt="avatar">
@@ -21,7 +20,6 @@ const reviews = () => {
             <p class="member__firstname">${this.name} </p>
         
         </div>
-
         </div>
         <p class="reviews__text">
           ${this.text}
@@ -30,7 +28,6 @@ const reviews = () => {
               `;
     }
   }
-
   const popupForm = document.querySelector('.popup__form');
 
   popupForm.addEventListener('submit', function (e) {
@@ -38,7 +35,7 @@ const reviews = () => {
   });
 
   function makeCommetn(e) {
-    e.preventDefault()
+    e.preventDefault();
     const form = document.querySelector('.reviews__popup');
     const reviewsName = document.querySelector('.reviews__name');
     const reviewsArea = document.querySelector('.reviews__area');
@@ -48,12 +45,10 @@ const reviews = () => {
       commentName: reviewsName.value,
       commentText: reviewsArea.value
     };
-
     popupForm.reset();
     form.style.display = 'none';
     document.body.style.overflow = '';
   }
-
 };
 
 export default reviews;
