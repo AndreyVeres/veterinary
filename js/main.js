@@ -20,3 +20,5 @@ window.addEventListener('DOMContentLoaded', () => {
         popup('.calldoctor' , '.calldoctor__popup');
         popup('.orange__btn' , '.registration__popup');
 });
+
+
